@@ -15,3 +15,8 @@ async def start_metrics_server(port=8000):
     loop = asyncio.get_event_loop()
     await loop.run_in_executor(None, start_http_server, port)
     print(f"Prometheus metrics server started on port {port}")
+    
+analysis_requests.inc()
+with analysis_duration.time():
+    result = await perform_analysis()
+cache_hits.inc()
