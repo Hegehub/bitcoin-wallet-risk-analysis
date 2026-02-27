@@ -1,0 +1,21 @@
+# Webhook
+USE_WEBHOOK=true
+WEBHOOK_PATH=/webhook
+WEBHOOK_URL=https://yourdomain.com/webhook
+WEBHOOK_SECRET=your_secret_here
+WEBHOOK_HOST=0.0.0.0
+WEBHOOK_PORT=8443
+
+# Sentry
+SENTRY_DSN=https://your_sentry_dsn
+
+# ML
+ML_MODEL_PATH=models/risk_model.pkl
+ML_FEATURES=tx_count,avg_amount,unique_contracts,origin_risk
+
+# Blacklist
+BLACKLIST_UPDATE_INTERVAL=86400
+BLACKLIST_SOURCES=https://api.cryptoscamdb.org/v1/addresses,https://chainabuse.com/api/blacklist
+
+# Cache TTL
+CACHE_TTL_DAYS=7
