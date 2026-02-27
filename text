@@ -1,0 +1,61 @@
+risk_analyzer_bot/
+├── .github/workflows/deploy.yml
+├── .env.example
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── alembic.ini
+├── main.py
+├── config.py
+├── locales/                  # папка с переводами
+│   ├── ru/LC_MESSAGES/messages.po
+│   └── en/LC_MESSAGES/messages.po
+├── core/
+│   ├── i18n_middleware.py
+│   └── webhook.py
+├── modules/
+│   ├── analysis/
+│   │   ├── analyzer.py
+│   │   ├── btc_analyzer.py
+│   │   ├── eth_analyzer.py
+│   │   └── origins.py
+│   ├── auth/
+│   │   ├── two_factor.py
+│   │   └── security.py
+│   ├── payments/
+│   │   ├── processor.py
+│   │   └── walletpay_api.py
+│   ├── admin/
+│   │   ├── panel.py
+│   │   └── stats.py
+│   ├── subscriptions/
+│   │   ├── manager.py
+│   │   └── models.py
+│   ├── graph/
+│   │   └── graph_analyzer.py
+│   ├── ml/
+│   │   ├── ml_risk_predictor.py
+│   │   └── train_model.py
+│   └── blacklist/
+│       └── updater.py
+├── database/
+│   ├── models.py
+│   ├── redis_cache.py
+│   └── queries.py
+├── security/
+│   ├── api_security.py
+│   ├── waf_middleware.py
+│   └── monitoring.py
+├── handlers/
+│   ├── commands.py
+│   ├── callback.py
+│   ├── payments.py
+│   ├── i18n_example.py
+│   └── admin_commands.py
+├── utils/
+│   ├── validators.py
+│   ├── formatters.py
+│   └── metrics.py
+└── services/
+    ├── queue_service.py
+    └── update_blacklists.py
